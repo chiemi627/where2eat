@@ -1,24 +1,20 @@
-# README
+# Where2Eat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ご飯食べに行こうか優柔不断で決められないというつくば市研究学園都市に住んでいるの人のためのアプリです。好きなご飯屋さんいくつか知っているけれども、いつもどこに行こうか迷っちゃって同じところや学食になっちゃう人のために、「ここにいけ！」と勝手に決めて少し強引に背中を押して欲してくれます。
 
-Things you may want to cover:
+## 開発する予定の機能
+* とにかく何かオススメしてくれる
+* 複数の店舗をランダムにオススメしてくれる
+* 行くための基本的な情報を教えてくれる
+* 電話できるようになる
+* 店の雰囲気がわかる
+* 「そこはいきたくない」という時に別の何かをオススメしてくれる
+* 知ってるお店を登録してくれる
 
-* Ruby version
+随時アップデートの予定です。
 
-* System dependencies
+## 開発者
+* chiemi627 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Where2Eatについて
+* このアプリはenPiT履修者が基礎知識学習にWebアプリ入門で作っている作品です
