@@ -1,0 +1,26 @@
+<h1>お食事どころ一覧</h1>
+
+<%= link_to "新規登録", new_eatery_path, class: "btn btn-primary" %> 
+
+<div class=".mb-3">
+    <table>
+        <tr>
+        <td><%= Eatery.human_attribute_name(:name) %></td>
+        <td><%= Eatery.human_attribute_name(:address)%></td>
+        <td><%= Eatery.human_attribute_name(:tel)%></td>
+        <td><%= Eatery.human_attribute_name(:regular_holiday)%></td>
+        <td><%= Eatery.human_attribute_name(:open)%></td>
+        <td><%= Eatery.human_attribute_name(:close)%></td>
+        </tr>
+        <% @eateries.each do |eatery| %>
+            <tr>
+                <td><%= eatery.name %></td>
+                <td><%= eatery.address %></td>
+                <td><%= eatery.tel %></td>
+                <td><%= eatery.regular_holiday %></td>
+                <td><%= eatery.open %></td>
+                <td><%= eatery.close %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>
