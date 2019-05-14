@@ -11,12 +11,20 @@ class EateriesController < ApplicationController
   end
 
   def edit
+    @eatery = Eatery.find(params[:id])
+  end
+
+  def update
+    eatery = Eatery.find(params[:id])
+    eatery.update(eatery_params)
+    redirect_to eateries_url, notice: "#{Eatery.model_name.human}「#{eatery.name}」を更新しました。"
+
   end
 
   def create
     eatery = Eatery.new(eatery_params)
     eatery.save!
-    redirect_to eateries_url, notice: "お食事どころ「#{eatery.name}」を追加しました。"
+    redirect_to eateries_url, notice: "#{Eatery.model_name.human}「#{eatery.name}」を追加しました。"
   end
 
   def eatery_params

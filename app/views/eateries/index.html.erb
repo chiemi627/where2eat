@@ -1,4 +1,4 @@
-<h1>お食事どころ一覧</h1>
+<h1><%= Eatery.model_name.human %> 一覧</h1>
 
 <%= link_to "新規登録", new_eatery_path, class: "btn btn-primary" %> 
 
@@ -20,6 +20,7 @@
                 <td><%= eatery.regular_holiday %></td>
                 <td><%= eatery.open %></td>
                 <td><%= eatery.close %></td>
+                <td><%= link_to '編集', edit_eatery_path(eatery), class: 'btn btn-primary mr-3' %></td>
             </tr>
         <% end %>
     </table>
