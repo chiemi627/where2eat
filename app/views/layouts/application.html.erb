@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Where2Eat", '#', id:"logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+          <% end %>
+          </li>
+        </nav>
+      </div>
+    </header>
     <% if flash.notice.present? %>
       <div class=".alert.asert-success">
         <%= flash.notice %>

@@ -1,4 +1,6 @@
 class EateriesController < ApplicationController
+  before_action :login_required
+
   def index
     @eateries = Eatery.all
   end
@@ -27,7 +29,13 @@ class EateriesController < ApplicationController
     redirect_to eateries_url, notice: "#{Eatery.model_name.human}「#{eatery.name}」を追加しました。"
   end
 
+  private
+
   def eatery_params
     params.require(:eatery).permit(:name,:address,:tel,:regular_holiday,:open,:close)
   end
+
+  def login_required
+    redirect_to login_path unless current_user
+end
 end
