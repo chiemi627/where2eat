@@ -19,14 +19,16 @@ class EateriesController < ApplicationController
   def update
     eatery = Eatery.find(params[:id])
     eatery.update(eatery_params)
-    redirect_to eateries_url, notice: "#{Eatery.model_name.human}「#{eatery.name}」を更新しました。"
+    flash[:success] = "#{Eatery.model_name.human}「#{eatery.name}」を追加しました。"
+    redirect_to eateries_url
 
   end
 
   def create
     eatery = Eatery.new(eatery_params)
     eatery.save!
-    redirect_to eateries_url, notice: "#{Eatery.model_name.human}「#{eatery.name}」を追加しました。"
+    flash[:success] = "#{Eatery.model_name.human}「#{eatery.name}」を追加しました。"
+    redirect_to eateries_url
   end
 
   private
