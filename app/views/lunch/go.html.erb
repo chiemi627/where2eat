@@ -1,1 +1,7 @@
 <h1><%= @recommend.name %>に行きましょうよ</h1>
+<ul> 
+  <li>住所: <%= @recommend.address %></li>
+  <li>電話番号：<%= @recommend.tel %></li>
+  <li>定休日：<%= @recommend.regular_holiday %></li>
+  <li>営業時間：<%= @recommend.open %> - <%= @recommend.close %>
+</ul>
